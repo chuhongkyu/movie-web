@@ -1,3 +1,5 @@
+
+
 const Header = ()=>{
     return(
         <header>
@@ -10,7 +12,7 @@ const Header = ()=>{
                 </ul>
             </nav>
             <div>
-                <span>알림</span>
+                <span></span>
                 <span>더보기</span>
             </div>
         </header>
