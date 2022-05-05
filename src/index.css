@@ -84,6 +84,7 @@ body,
 }
 
 header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,8 +92,9 @@ header {
 }
 
 header nav {
+  width: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -112,6 +114,7 @@ header nav ul li {
 }
 
 .services {
+  width: 20%;
   display: flex;
   justify-content: space-around;
   align-items: center;

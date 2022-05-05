@@ -15,6 +15,7 @@ const Header = ()=>{
             <div className="services">
                 <span><FontAwesomeIcon icon={faSearch} className="search" /></span>
                 <span>더보기</span>
+                <span>Profile</span>
             </div>
         </header>
 
