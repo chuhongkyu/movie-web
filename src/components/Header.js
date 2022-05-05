@@ -1,4 +1,5 @@
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ()=>{
     return(
@@ -11,8 +12,8 @@ const Header = ()=>{
                     <li>Recently</li>
                 </ul>
             </nav>
-            <div>
-                <span></span>
+            <div className="services">
+                <span><FontAwesomeIcon icon={faSearch} className="search" /></span>
                 <span>더보기</span>
             </div>
         </header>

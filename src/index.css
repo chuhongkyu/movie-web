@@ -83,20 +83,20 @@ body,
   height: 60px;
 }
 
-.Home header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
 
-.Home header nav {
+header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.Home header nav ul {
+header nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,9 +104,18 @@ body,
   margin-left: 20px;
 }
 
-.Home header nav ul li {
+header nav ul li {
   width: 100px;
   height: 100%;
   display: inline-block;
   text-align: center;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.services span {
+  margin-right: 10px;
 }
