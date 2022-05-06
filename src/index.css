@@ -76,6 +76,7 @@ body,
 .Home {
   width: 100%;
   height: 100vh;
+  padding: 20px 30px;
 }
 
 .small_logo {
@@ -88,7 +89,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  margin-bottom: 20px;
 }
 
 header nav {
@@ -119,16 +120,23 @@ header nav ul li {
   justify-content: space-around;
   align-items: center;
 }
+
 .services span {
   margin-right: 10px;
 }
 
 .GenreList {
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .GenreList_Column {
   width: 100%;
   overflow-y: hidden;
   display: flex;
+  margin-top: 10px;
+}
+
+.GenreList_Column::-webkit-scrollbar {
+  display: none;
 }
