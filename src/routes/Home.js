@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
-import Movie from '../components/Movie';
 import Header from "../components/Header";
+import GenreItem from "../components/GenreItem";
+import GenreList from "../components/GenreList";
 
 const Home =()=>{
     const [loading, setLoading] = useState(true);
@@ -18,26 +19,29 @@ const Home =()=>{
         getMovies();
     }, []);
 
-    console.log(movies);
+    const ActionMovie = movies.filter((movie)=> movie.genres.includes("Action"))
 
+    console.log(ActionMovie)
     return(
         <div className="Home">
             {loading ? <h1>Loading...</h1> : 
             <div>
                 <Header/>
-                {movies.map((movie)=>
-                <Movie
-                    key={movie.id}
-                    id={movie.id}
-                    coverImage={movie.medium_cover_image}
-                    title={movie.title}
-                    summary={movie.summary}
-                    genres={movie.genres}
+                <GenreList
+                    genreTitle={"액션"}
+                    genreItem={ActionMovie.map((movie)=>
+                        <GenreItem
+                            key={movie.id}
+                            title={movie.id}
+                            coverImg={movie.medium_cover_image}
+                            genres={movie.genres}   
+                        />)  
+                    }
                 />
-                )}
-            </div>}
+            </div>
+            }
         </div>
   )
 }
 
-export default Home
+export default Home;
