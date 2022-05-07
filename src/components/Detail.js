@@ -20,16 +20,23 @@ const Detail = ()=>{
 
     return(
         <div>
-        {loading ? 
-        <h1>Loading...</h1>:
-        <div>
-            <h1>{movie.title}</h1>
-            <div>
-                <p>{movie.runtime}:min</p>
-                <p>{movie.rating}</p>
-                <p>{movie.year}</p>
+            {loading ? 
+            <h1>Loading...</h1>:
+            <div className="Detail">
+                <div className="Detail_text_column">
+                    <h1>{movie.title}</h1>
+                    <div className="Detail_text_sub">
+                        <p>{movie.year}</p>
+                        <p>{movie.runtime}:min</p>
+                        <p>{movie.rating}.0</p>
+                    </div>
+                    <div>
+                        <p>{movie.description_intro.length > 300 ? movie.description_intro.substr(0, 300)+"..." :movie.description_intro}</p>
+                    </div>
+                </div>
+                <img src={movie.large_cover_image} alt={movie.title}/>
             </div>
-        </div>}
+            }
         </div>
 
     )

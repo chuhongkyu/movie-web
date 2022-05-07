@@ -35,7 +35,8 @@ const Home =()=>{
                         <GenreItem
                             key={movie.id}
                             title={movie.id}
-                            coverImg={movie.medium_cover_image} 
+                            coverImg={movie.medium_cover_image}
+                            id={movie.id}
                         />)  
                     }
                 />
@@ -45,7 +46,8 @@ const Home =()=>{
                         <GenreItem
                             key={movie.id}
                             title={movie.id}
-                            coverImg={movie.medium_cover_image} 
+                            coverImg={movie.medium_cover_image}
+                            id={movie.id}
                         />)  
                     }
                 />
@@ -55,7 +57,8 @@ const Home =()=>{
                         <GenreItem
                             key={movie.id}
                             title={movie.id}
-                            coverImg={movie.medium_cover_image}  
+                            coverImg={movie.medium_cover_image}
+                            id={movie.id} 
                         />)  
                     }
                 />
