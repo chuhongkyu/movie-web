@@ -80,8 +80,8 @@ body,
 }
 
 .small_logo {
-  width: 200px;
-  height: 60px;
+  width: 220px;
+  height: 50px;
 }
 
 header {
@@ -112,6 +112,10 @@ header nav ul li {
   height: 100%;
   display: inline-block;
   text-align: center;
+}
+
+header nav ul a {
+  color: white;
 }
 
 .services {
@@ -148,37 +152,68 @@ header nav ul li {
 .Detail {
   width: 100%;
   height: 100%;
-  padding: 20px 30px;
+  padding: 0px 50px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Detail_text_column {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  float: left;
+  width: 50%;
 }
 
 .Detail_text_column h1 {
-  font-size: 35px;
+  font-size: 55px;
+  margin-bottom: 20px;
 }
 
 .Detail_text_sub {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .Detail_text_sub p {
   font-size: 20px;
+  margin-right: 20px;
 }
 
 .Detail_text_sub p:first-of-type {
   color: #37a651;
   font-weight: 600;
-  margin-right: 20px;
 }
 
 .Detail_text_sub p:last-of-type {
   border: 1px solid gray;
+  padding: 0px 5px;
+}
+
+.Detail_gerne_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Detail_gerne_text p {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.Detail_description {
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+.Detail_img {
+  width: 50%;
+  float: right;
+  display: flex;
+  justify-content: center;
 }

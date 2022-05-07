@@ -1,15 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Header = ()=>{
     return(
         <header>
             <nav>
-                <img className="small_logo" src="assets/Netflix_2015_logo.svg.png" alt="logo"/>
+            <Link to="/"><img className="small_logo" src="assets/Netflix_2015_logo.svg.png" alt="logo"/></Link>
                 <ul>
-                    <li>홈</li>
-                    <li>Rating</li>
-                    <li>Recently</li>
+                    <Link to="/"><li>첫 화면</li></Link>
+                    <li>액션</li>
+                    <li>다큐멘터리</li>
+                    <li>1시간 이상</li>
                 </ul>
             </nav>
             <div className="services">

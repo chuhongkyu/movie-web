@@ -14,6 +14,7 @@ const Detail = ()=>{
     setLoading(false)
     console.log(json.data.movie);
     };
+
     useEffect(() => {
         getMovie();
     }, []);
@@ -27,14 +28,20 @@ const Detail = ()=>{
                     <h1>{movie.title}</h1>
                     <div className="Detail_text_sub">
                         <p>{movie.year}</p>
-                        <p>{movie.runtime}:min</p>
-                        <p>{movie.rating}.0</p>
+                        <p>Running time : {movie.runtime} min</p>
+                        <p>{movie.rating}</p>
                     </div>
-                    <div>
+                    <div className="Detail_gerne_text">
+                        <p>Gerne :</p>{movie.genres.map((genre)=> <p key={genre}>{genre}</p>)}
+                    </div>
+                    <div className="Detail_description">
                         <p>{movie.description_intro.length > 300 ? movie.description_intro.substr(0, 300)+"..." :movie.description_intro}</p>
                     </div>
                 </div>
-                <img src={movie.large_cover_image} alt={movie.title}/>
+                <div className="Detail_img">
+                    <img src={movie.large_cover_image} alt={movie.title}/>
+                </div>
+                
             </div>
             }
         </div>
