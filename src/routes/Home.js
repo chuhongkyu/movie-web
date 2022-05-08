@@ -2,6 +2,20 @@ import {useState, useEffect} from "react";
 import Header from "../components/Header";
 import GenreItem from "../components/GenreItem";
 import GenreList from "../components/GenreList";
+import styled from "styled-components";
+
+const HomeContainer = styled.div`
+    width: 100%;
+    height: 100vh;
+    padding: 20px 30px;
+`
+
+const HomeContainerSmall = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-color:${(props)=>props.backgroundColor};
+    color: ${(props)=>props.textColor};
+`
 
 const Home =()=>{
     const [loading, setLoading] = useState(true);
@@ -19,15 +33,20 @@ const Home =()=>{
         getMovies();
     }, []);
 
+    useEffect(() => {
+        const titleElement = document.getElementsByTagName('title')[0];
+        titleElement.innerHTML = `넷플릭스`;
+    }, [])
+
     const ActionMovie = movies.filter((movie)=> movie.genres.includes("Action"))
     const DocMovie = movies.filter((movie)=> movie.genres.includes("Documentary"))
     const LogtimeMovie = movies.filter((movie)=> parseInt(movie.runtime) > 60)
 
     console.log(movies)
     return(
-        <div className="Home">
+        <HomeContainer>
             {loading ? <h1>Loading...</h1> : 
-            <div>
+            <HomeContainerSmall backgroundColor="black" textColor="white">
                 <Header/>
                 <GenreList
                     genreTitle={"액션"}
@@ -62,9 +81,9 @@ const Home =()=>{
                         />)  
                     }
                 />
-            </div>
+            </HomeContainerSmall>
             }
-        </div>
+        </HomeContainer>
   )
 }
 

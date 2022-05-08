@@ -19,6 +19,11 @@ const Detail = ()=>{
         getMovie();
     }, []);
 
+    useEffect(() => {
+        const titleElement = document.getElementsByTagName('title')[0];
+        titleElement.innerHTML = `${movie.title}`;
+    }, [])
+
     return(
         <div>
             {loading ? 
@@ -35,7 +40,7 @@ const Detail = ()=>{
                         <p>Gerne :</p>{movie.genres.map((genre)=> <p key={genre}>{genre}</p>)}
                     </div>
                     <div className="Detail_description">
-                        <p>{movie.description_intro.length > 300 ? movie.description_intro.substr(0, 300)+"..." :movie.description_intro}</p>
+                        <p>{movie.description_intro.length > 300 ? `${movie.description_intro.slice(0, 300)}...` :movie.description_intro}</p>
                     </div>
                 </div>
                 <div className="Detail_img">

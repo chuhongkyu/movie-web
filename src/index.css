@@ -11,72 +11,9 @@ body,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
   width: 100%;
   height: 100vh;
-  color: white;
-}
-
-.Enter {
-  width: 100%;
-  height: 100%;
-}
-
-.Enter_div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: black;
-  overflow: hidden;
-}
-
-.Enter .logo {
-  width: 100%;
-  margin-left: 20px;
-}
-
-.logo_background {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(3, 3, 3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 10px;
-  transform: perspective(600px) rotateY(-10deg) rotateX(10deg);
-  /* perspective-origin: -170%; */
-}
-
-.grid_span {
-  grid-column: span 1;
-  position: relative;
-}
-
-.grid_span img {
-  width: 100%;
-  height: 100%;
-}
-
-.grid_span h5 {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  color: white;
-}
-
-.Home {
-  width: 100%;
-  height: 100vh;
-  padding: 20px 30px;
 }
 
 .small_logo {
@@ -156,6 +93,7 @@ header nav ul a {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .Detail_text_column {
